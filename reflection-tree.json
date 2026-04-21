@@ -1,7 +1,7 @@
 [
-  {"id":"START","type":"start","text":"Good evening. Let's reflect on your day.","next":"Q1"},
+  {"id":"START","type":"start","text":"Good evening. Let’s take a few minutes to reflect on your day — not to judge it, but to understand it.","next":"Q1"},
 
-  {"id":"Q1","type":"question","text":"How was your day overall?","options":["Productive","Tough","Mixed","Frustrating"],"next":"D1"},
+  {"id":"Q1","type":"question","text":"How would you describe your day overall?","options":["Productive","Tough","Mixed","Frustrating"],"next":"D1"},
 
   {"id":"D1","type":"decision","rules":{
     "Productive":"Q2A",
@@ -10,61 +10,61 @@
     "Frustrating":"Q2B"
   }},
 
-  {"id":"Q2A","type":"question","text":"What contributed most to your positive moments?","options":["My effort","Team support","Luck","Adaptability"],"next":"R1"},
-  {"id":"Q2B","type":"question","text":"When things went wrong, what was your reaction?","options":["Tried to fix it","Waited for help","Felt stuck","Blamed situation"],"next":"R2"},
+  {"id":"Q2A","type":"question","text":"When things went well today, what made the biggest difference?","options":["My preparation","Team support","I adapted as things changed","It just worked out"],"next":"R1"},
+  {"id":"Q2B","type":"question","text":"When things didn’t go as planned, what was your first reaction?","options":["I looked for what I could control","I waited for things to improve","I felt stuck","I focused on what went wrong"],"next":"R2"},
 
-  {"id":"R1","type":"reflection","text":"You recognized your role in success. That shows strong personal agency.","next":"Q3"},
-  {"id":"R2","type":"reflection","text":"Even in difficult situations, there were moments where your choices mattered.","next":"Q3"},
+  {"id":"R1","type":"reflection","text":"You’re noticing your role in what worked. That awareness of your own actions is what builds real control over time.","next":"Q3"},
+  {"id":"R2","type":"reflection","text":"Difficult days often pull attention toward what’s outside our control. Still, there are usually small choices we make within them — noticing those is where change begins.","next":"Q3"},
 
-  {"id":"Q3","type":"question","text":"When facing a challenge today, what did you do?","options":["Took initiative","Asked for help","Avoided it","Delayed action"],"next":"D2"},
+  {"id":"Q3","type":"question","text":"When you faced a challenge today, how did you respond?","options":["I took initiative to move forward","I asked for help when needed","I delayed action","I avoided dealing with it"],"next":"D2"},
 
   {"id":"D2","type":"decision","rules":{
-    "Took initiative":"R3",
-    "Asked for help":"R3",
-    "Avoided it":"R4",
-    "Delayed action":"R4"
+    "I took initiative to move forward":"R3",
+    "I asked for help when needed":"R3",
+    "I delayed action":"R4",
+    "I avoided dealing with it":"R4"
   }},
 
-  {"id":"R3","type":"reflection","text":"You showed ownership in handling situations. That builds long-term growth.","next":"BR1"},
-  {"id":"R4","type":"reflection","text":"Avoiding action can feel easier, but recognizing it is the first step to change.","next":"BR1"},
+  {"id":"R3","type":"reflection","text":"You stayed engaged with the situation instead of stepping away from it. That willingness to act is a strong foundation for growth.","next":"BR1"},
+  {"id":"R4","type":"reflection","text":"Stepping back or delaying can feel easier in the moment. Recognizing that pattern is the first step toward changing it.","next":"BR1"},
 
-  {"id":"BR1","type":"bridge","text":"Now let's shift from how you handled things to what you contributed.","next":"Q4"},
+  {"id":"BR1","type":"bridge","text":"You’ve reflected on how you handled situations. Now let’s shift to what you contributed during the day.","next":"Q4"},
 
-  {"id":"Q4","type":"question","text":"Did you help someone today?","options":["Yes, actively","A little","No","Not sure"],"next":"D3"},
+  {"id":"Q4","type":"question","text":"Which of these best describes a moment from your day?","options":["I helped someone beyond my responsibility","I did what was expected of me","I needed support from others","I felt others should have done more"],"next":"D3"},
 
   {"id":"D3","type":"decision","rules":{
-    "Yes, actively":"R5",
-    "A little":"R5",
-    "No":"R6",
-    "Not sure":"R6"
+    "I helped someone beyond my responsibility":"R5",
+    "I did what was expected of me":"R5",
+    "I needed support from others":"R6",
+    "I felt others should have done more":"R6"
   }},
 
-  {"id":"R5","type":"reflection","text":"You contributed beyond yourself. That strengthens teams and trust.","next":"Q5"},
-  {"id":"R6","type":"reflection","text":"Opportunities to contribute often appear small — noticing them is key.","next":"Q5"},
+  {"id":"R5","type":"reflection","text":"You leaned toward contributing. Even small actions like helping or taking initiative build stronger teams over time.","next":"Q5"},
+  {"id":"R6","type":"reflection","text":"It’s natural to notice what we needed or expected. Shifting even a little toward what we can give often changes how the day feels.","next":"Q5"},
 
-  {"id":"Q5","type":"question","text":"What was your focus today?","options":["Giving effort","Expecting recognition","Completing tasks","Avoiding pressure"],"next":"R7"},
+  {"id":"Q5","type":"question","text":"What was your main focus throughout the day?","options":["Doing meaningful work","Completing tasks efficiently","Getting recognition","Avoiding pressure"],"next":"R7"},
 
-  {"id":"R7","type":"reflection","text":"Your focus shapes your experience — shifting toward contribution can increase meaning.","next":"BR2"},
+  {"id":"R7","type":"reflection","text":"Where you place your focus shapes how your work feels. When effort connects to purpose or contribution, it often becomes more meaningful.","next":"BR2"},
 
-  {"id":"BR2","type":"bridge","text":"Now let's reflect on who you were thinking about today.","next":"Q6"},
+  {"id":"BR2","type":"bridge","text":"Now let’s widen the lens a bit — beyond just your tasks.","next":"Q6"},
 
-  {"id":"Q6","type":"question","text":"Who did you think about most today?","options":["Myself","My team","A colleague","Customers"],"next":"D4"},
+  {"id":"Q6","type":"question","text":"When you think about your day, who comes to mind most?","options":["Mostly myself","My team","A specific colleague","The end user or customer"],"next":"D4"},
 
   {"id":"D4","type":"decision","rules":{
-    "Myself":"R8",
+    "Mostly myself":"R8",
     "My team":"R9",
-    "A colleague":"R9",
-    "Customers":"R9"
+    "A specific colleague":"R9",
+    "The end user or customer":"R9"
   }},
 
-  {"id":"R8","type":"reflection","text":"Focusing only on yourself can feel limiting — expanding your view can bring more purpose.","next":"Q7"},
-  {"id":"R9","type":"reflection","text":"Thinking beyond yourself shows awareness and connection to a larger purpose.","next":"Q7"},
+  {"id":"R8","type":"reflection","text":"Focusing only on yourself is natural, especially on busy days. Expanding that view — even slightly — can change how situations feel.","next":"Q7"},
+  {"id":"R9","type":"reflection","text":"You’re already considering people beyond yourself. That wider perspective often brings more clarity and meaning.","next":"Q7"},
 
-  {"id":"Q7","type":"question","text":"How did your actions impact others?","options":["Positively","No impact","Not sure","Negatively"],"next":"R10"},
+  {"id":"Q7","type":"question","text":"Looking back, how did your actions affect others today?","options":["Positively","No noticeable impact","I’m not sure","Possibly negatively"],"next":"R10"},
 
-  {"id":"R10","type":"reflection","text":"Every action creates ripple effects — awareness helps you shape better outcomes.","next":"SUMMARY"},
+  {"id":"R10","type":"reflection","text":"Every action creates ripple effects, whether we notice them or not. Awareness of that impact is what helps shape better choices over time.","next":"SUMMARY"},
 
-  {"id":"SUMMARY","type":"summary","text":"Today you reflected on your actions, contributions, and awareness. Small improvements here can lead to meaningful growth.","next":"END"},
+  {"id":"SUMMARY","type":"summary","text":"Today you explored how you responded to situations, what you contributed, and how you related to others. Small shifts in any of these areas can gradually change how your days unfold.","next":"END"},
 
-  {"id":"END","type":"end","text":"Good job reflecting today. See you tomorrow."}
+  {"id":"END","type":"end","text":"That’s it for today. See you tomorrow."}
 ]
