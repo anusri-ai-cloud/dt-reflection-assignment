@@ -1,6 +1,6 @@
 import json
 
-with open("reflection-tree.json") as f:
+with open("reflection-tree.json", encoding="utf-8") as f:
     tree = {node["id"]: node for node in json.load(f)}
 
 current = "START"
@@ -17,8 +17,13 @@ while True:
         choice = int(input("Choose option: ")) - 1
         selected = node["options"][choice]
 
-        decision = tree[node["next"]]
-        current = decision["rules"][selected]
+        next_node = tree[node["next"]]
+
+        # ✅ If next is decision node
+        if next_node["type"] == "decision":
+            current = next_node["rules"][selected]
+        else:
+            current = node["next"]
 
     elif node["type"] in ["reflection", "bridge", "summary"]:
         input("\nPress Enter to continue...")
