@@ -1,0 +1,70 @@
+[
+  {"id":"START","type":"start","text":"Good evening. Let's reflect on your day.","next":"Q1"},
+
+  {"id":"Q1","type":"question","text":"How was your day overall?","options":["Productive","Tough","Mixed","Frustrating"],"next":"D1"},
+
+  {"id":"D1","type":"decision","rules":{
+    "Productive":"Q2A",
+    "Mixed":"Q2A",
+    "Tough":"Q2B",
+    "Frustrating":"Q2B"
+  }},
+
+  {"id":"Q2A","type":"question","text":"What contributed most to your positive moments?","options":["My effort","Team support","Luck","Adaptability"],"next":"R1"},
+  {"id":"Q2B","type":"question","text":"When things went wrong, what was your reaction?","options":["Tried to fix it","Waited for help","Felt stuck","Blamed situation"],"next":"R2"},
+
+  {"id":"R1","type":"reflection","text":"You recognized your role in success. That shows strong personal agency.","next":"Q3"},
+  {"id":"R2","type":"reflection","text":"Even in difficult situations, there were moments where your choices mattered.","next":"Q3"},
+
+  {"id":"Q3","type":"question","text":"When facing a challenge today, what did you do?","options":["Took initiative","Asked for help","Avoided it","Delayed action"],"next":"D2"},
+
+  {"id":"D2","type":"decision","rules":{
+    "Took initiative":"R3",
+    "Asked for help":"R3",
+    "Avoided it":"R4",
+    "Delayed action":"R4"
+  }},
+
+  {"id":"R3","type":"reflection","text":"You showed ownership in handling situations. That builds long-term growth.","next":"BR1"},
+  {"id":"R4","type":"reflection","text":"Avoiding action can feel easier, but recognizing it is the first step to change.","next":"BR1"},
+
+  {"id":"BR1","type":"bridge","text":"Now let's shift from how you handled things to what you contributed.","next":"Q4"},
+
+  {"id":"Q4","type":"question","text":"Did you help someone today?","options":["Yes, actively","A little","No","Not sure"],"next":"D3"},
+
+  {"id":"D3","type":"decision","rules":{
+    "Yes, actively":"R5",
+    "A little":"R5",
+    "No":"R6",
+    "Not sure":"R6"
+  }},
+
+  {"id":"R5","type":"reflection","text":"You contributed beyond yourself. That strengthens teams and trust.","next":"Q5"},
+  {"id":"R6","type":"reflection","text":"Opportunities to contribute often appear small — noticing them is key.","next":"Q5"},
+
+  {"id":"Q5","type":"question","text":"What was your focus today?","options":["Giving effort","Expecting recognition","Completing tasks","Avoiding pressure"],"next":"R7"},
+
+  {"id":"R7","type":"reflection","text":"Your focus shapes your experience — shifting toward contribution can increase meaning.","next":"BR2"},
+
+  {"id":"BR2","type":"bridge","text":"Now let's reflect on who you were thinking about today.","next":"Q6"},
+
+  {"id":"Q6","type":"question","text":"Who did you think about most today?","options":["Myself","My team","A colleague","Customers"],"next":"D4"},
+
+  {"id":"D4","type":"decision","rules":{
+    "Myself":"R8",
+    "My team":"R9",
+    "A colleague":"R9",
+    "Customers":"R9"
+  }},
+
+  {"id":"R8","type":"reflection","text":"Focusing only on yourself can feel limiting — expanding your view can bring more purpose.","next":"Q7"},
+  {"id":"R9","type":"reflection","text":"Thinking beyond yourself shows awareness and connection to a larger purpose.","next":"Q7"},
+
+  {"id":"Q7","type":"question","text":"How did your actions impact others?","options":["Positively","No impact","Not sure","Negatively"],"next":"R10"},
+
+  {"id":"R10","type":"reflection","text":"Every action creates ripple effects — awareness helps you shape better outcomes.","next":"SUMMARY"},
+
+  {"id":"SUMMARY","type":"summary","text":"Today you reflected on your actions, contributions, and awareness. Small improvements here can lead to meaningful growth.","next":"END"},
+
+  {"id":"END","type":"end","text":"Good job reflecting today. See you tomorrow."}
+]
